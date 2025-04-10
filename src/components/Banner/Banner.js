@@ -8,6 +8,7 @@ import {
 } from "../../assets/images";
 import Image from "../designLayouts/Image";
 
+
 const Banner = () => {
   const [dotActive, setDocActive] = useState(0);
   const settings = {
