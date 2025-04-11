@@ -1,7 +1,25 @@
 import React from "react";
 import { SplOfferData } from "../../../constants";
+import { useNavigate } from "react-router-dom";
+
 
 const ProductsOnSale = () => {
+
+  const navigate = useNavigate()
+
+  const idString = (_id) => {
+    return String(_id).toLowerCase().split(" ").join("");
+  };
+
+  const handleProductDetails0 = (_id, productItem) => {
+    navigate(`/product/${idString(_id)}`, {
+      state: {
+        item: productItem,
+      },
+    });
+  };
+
+
   return (
     <div>
       <h3 className="font-titleFont text-xl font-semibold mb-6 underline underline-offset-4 decoration-[1px]">
